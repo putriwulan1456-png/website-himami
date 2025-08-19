@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himpunan Mahasiswa Manajemen Informatika</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #030303 0%, #030303 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(3, 3, 3, 0.1);
+        }
+        .event-calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+        }
+        .day:hover {
+            background-color: #030303;
+            color: rgb(3, 3, 3);
+        }
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: none;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="logo_mi.jpg" alt="Logo Himpunan Mahasiswa Manajemen Informatika" class="rounded-full">
+                <h1 class="text-xl font-bold">HIMAMI</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-blue-200">Beranda</a>
+                <a href="#about" class="hover:text-blue-200">Tentang Himami</a>
+                <a href="#vision mission" class="hover:text-blue-200">Visi Misi</a>
+                <a href="#programs" class="hover:text-blue-200">Program/Kegiatan</a>
+                <a href="#gallery" class="hover:text-blue-200">Galeri</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobileMenuButton" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu md:hidden bg-blue-900">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-4">
+                <a href="#home" class="text-white py-2 hover:bg-blue-800 px-4 rounded">Beranda</a>
+                <a href="#about" class="text-white py-2 hover:bg-blue-800 px-4 rounded">Tentang Himami</a>
+                <a href="#vision mission" class="text-white py-2 hover:bg-blue-800 px-4 rounded">Visi Misi</a>
+                <a href="#programs" class="text-white py-2 hover:bg-blue-800 px-4 rounded">Program/Kegiatan</a>
+                <a href="#gallery" class="text-white py-2 hover:bg-blue-800 px-4 rounded">Galeri</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl font-bold mb-6">Himpunan Mahasiswa<br>Manajemen Informatika</h2>
+                <p class="text-lg mb-8">Mewadahi, menginspirasi, dan memajukan mahasiswa Manajemen Informatika melalui berbagai kegiatan akademik dan non-akademik.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#join" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold text-center hover:bg-blue-50 transition">Daftar Anggota</a>
+                    <a href="#donate" class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-bold text-center hover:bg-yellow-300 transition">Donasi Sekarang</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://placehold.co/600x400" alt="Kelompok mahasiswa sedang diskusi dengan komputer di lab kampus" class="rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+                <!-- Struktur Organisasi Section -->
+    <section class="py-16 bg-white" id="structure">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-black-1200 mb-4">Tentang HIMAMI</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Struktur Kepengurusan</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">
+                    Susunan pengurus periode 2024/2025
+                </p>
+            </div>
+            <!-- Ketua dan Wakil (Side by Side) -->
+            <div class="flex flex-col md:flex-row justify-center gap-8 mb-12">
+                <!-- Ketua -->
+                <div class="leader-card bg-white rounded-xl shadow-md p-6 text-center w-full md:w-1/2">
+                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-blue-600 mb-4">
+                        <img src="ketua.jpg" alt="Foto Ketua HIMAMI" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">Dimas Nur</h3>
+                    <p class="text-blue-600 font-medium">Ketua Himpunan</p>
+                </div>
+                
+                <!-- Wakil Ketua -->
+                <div class="leader-card bg-white rounded-xl shadow-md p-6 text-center w-full md:w-1/2">
+                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-blue-600 mb-4">
+                        <img src="https://placehold.co/400x400" alt="Foto Wakil Ketua HIMAMI" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">Ahmad Fauzi</h3>
+                    <p class="text-blue-600 font-medium">Wakil Ketua</p>
+                </div>
+            </div>
+
+            <!-- Sekretaris 1 & 2 -->
+            <div class="flex flex-col md:flex-row justify-center gap-8 mb-12">
+                <!-- Sekretaris 1 -->
+                <div class="leader-card bg-white rounded-xl shadow-md p-6 text-center w-full md:w-1/2">
+                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-blue-600 mb-4">
+                        <img src="https://placehold.co/400x400" alt="Foto Sekretaris 1 HIMAMI" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">Nailah Salsabila</h3>
+                    <p class="text-blue-600 font-medium">Sekretaris 1</p>
+                </div>
+                
+                <!-- Sekretaris 2 -->
+                <div class="leader-card bg-white rounded-xl shadow-md p-6 text-center w-full md:w-1/2">
+                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-blue-600 mb-4">
+                        <img src="https://placehold.co/400x400" alt="Foto Sekretaris 2 HIMAMI" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">Falentio Mian Rezkina</h3>
+                    <p class="text-blue-600 font-medium">Sekretaris 2</p>
+                </div>
+            </div>
+
+            <!-- Bendahara 1 & 2 -->
+            <div class="flex flex-col md:flex-row justify-center gap-8 mb-12">
+                <!-- Bendahara 1 -->
+                <div class="leader-card bg-white rounded-xl shadow-md p-6 text-center w-full md:w-1/2">
+                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-blue-600 mb-4">
+                        <img src="https://placehold.co/400x400" alt="Foto Bendahara 1 HIMAMI" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">Salma Febryatha</h3>
+                    <p class="text-blue-600 font-medium">Bendahara 1</p>
+                </div>
+                
+                <!-- Bendahara 2 -->
+                <div class="leader-card bg-white rounded-xl shadow-md p-6 text-center w-full md:w-1/2">
+                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-blue-600 mb-4">
+                        <img src="https://placehold.co/400x400" alt="Foto Bendahara 2 HIMAMI" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">Alfi Rivansyah</h3>
+                    <p class="text-blue-600 font-medium">Bendahara 2</p>
+                </div>
+            </div>
+                <!-- Divisi-divisi -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+                    <!-- Divisi 1 -->
+                    <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Divisi Bela Negara</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium text-gray-900">Rahva Amelia</h4>
+                                <p class="text-gray-600">Koordinator</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Razaan Zaneti</h4>
+                                <p class="text-gray-600">Anggota</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Divisi 2 -->
+                    <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Divisi Kewirausahaan</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium text-gray-900">Aulia Rizky</h4>
+                                <p class="text-gray-600">Koordinator</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Ahmad Alfaruq</h4>
+                                <p class="text-gray-600">Anggota</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Putri Wulandari</h4>
+                                <p class="text-gray-600">Anggota</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Melisa Mawaddah</h4>
+                                <p class="text-gray-600">Anggota</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Divisi 3 -->
+                    <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Divisi Kominfo</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium text-gray-900">Hafidz Asmar</h4>
+                                <p class="text-gray-600">Koordinator</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Handika Harahap</h4>
+                                <p class="text-gray-600">Anggota</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Naftali Dzikra</h4>
+                                <p class="text-gray-600">Anggota</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://placehold.co/600x400" alt="Foto anggota HIMAMI sedang menyusun strategi di ruang meeting dengan papan tulis dan laptop" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Visi & Misi HIMAMI</h3>
+                    <div class="mb-8">
+                        <h4 class="text-xl font-medium text-blue-600 mb-2">Visi</h4>
+                        <p class="text-gray-600">
+                            Menjadi wadah pengembangan mahasiswa Manajemen Informatika yang unggul, inovatif, dan berkarakter.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-medium text-blue-600 mb-2">Misi</h4>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                            <li>Meningkatkan kompetensi akademik dan non-akademik anggota</li>
+                            <li>Mengembangkan kesadaran berorganisasi dan keprofesian</li>
+                            <li>Memperluas jaringan dengan industri dan organisasi terkait</li>
+                            <li>Mendorong kreativitas dan inovasi di bidang teknologi informasi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Program & Kegiatan</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-laptop-code text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Workshop Teknologi</h3>
+                    <p class="text-gray-600 mb-4">Pelatihan intensif tentang berbagai teknologi terkini seperti web development, data science, dan keamanan siber.</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center">Selengkapnya <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-users text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Diskusi Bulanan</h3>
+                    <p class="text-gray-600 mb-4">Forum diskusi rutin membahas isu-isu terkini di bidang manajemen informatika dan kelancaran Program Kerja.</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center">Selengkapnya <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-hand-holding-heart text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">IT Club</h3>
+                    <p class="text-gray-600 mb-4">Forum belajar bersama yang dilakukan secara rutin 2 minggu sekali guna untuk meningkatkan soft skill mahasiswa untuk mendalami materi kuliah dan mempersiapkan ujian.</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center">Selengkapnya <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Galeri Kegiatan</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="relative group">
+                    <img src="rapatrutinan.jpg" alt="Forum Diskusi Himami di kampus" class="w-full h-48 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition rounded-lg">
+                        <span class="text-white font-medium">Rapat Rutinan</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="https://placehold.co/600x600" alt="Kegiatan Belajar yang dilakukan di Laboratorium kampus" class="w-full h-48 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition rounded-lg">
+                        <span class="text-white font-medium">IT Club</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="https://placehold.co/600x600" alt="Foto bersama yang dilakukan setelah rapat rutinan" class="w-full h-48 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition rounded-lg">
+                        <span class="text-white font-medium">Foto Bersama</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="https://placehold.co/600x600" alt="Program Kerja Himami yang dilakukan untuk memperluas pengetahuan tentang budaya" class="w-full h-48 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition rounded-lg">
+                        <span class="text-white font-medium">Re-Fun-Day kampung Cika Cika</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="#" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700">Lihat Galeri Lengkap</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Section -->
+    <section id="join" class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Gabung Menjadi Relawan</h2>
+                <p class="text-xl max-w-2xl mx-auto">Mari berkontribusi dalam kegiatan Himami dan kembangkan potensi diri Anda!</p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-white text-gray-800 rounded-lg shadow-lg p-8">
+                <form id="volunteerForm">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="fullName" class="block mb-2 font-medium">Nama Lengkap</label>
+                            <input type="text" id="fullName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block mb-2 font-medium">Nomor HP</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        </div>
+                        <div>
+                            <label for="studyYear" class="block mb-2 font-medium">Tahun Angkatan</label>
+                            <input type="number" id="studyYear" min="2015" max="2023" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <label for="interest" class="block mb-2 font-medium">Minat Kegiatan</label>
+                        <select id="interest" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                            <option value="">Pilih minat kegiatan</option>
+                            <option value="workshop">IT Club</option>
+                            <option value="event">Kewirausahaan</option>
+                            <option value="publication">Kominfo</option>
+                            <option value="community">Bela Negara</option>
+                        </select>
+                    </div>
+                    <div class="mt-6">
+                        <label for="message" class="block mb-2 font-medium">Pesan (Opsional)</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    </div>
+                    <div class="mt-8">
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition">Daftar Sekarang</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="py-20 bg-gradient-to-r from-blue-600 to-indigo-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">Dukung Kegiatan Kami</h2>
+                <p class="text-xl mb-10">Kontribusi Anda membantu kami menyelenggarakan berbagai kegiatan pengembangan kompetensi bagi mahasiswa Manajemen Informatika.</p>
+                
+                <div class="grid md:grid-cols-3 gap-6 mb-10">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm border border-white border-opacity-20 card-hover">
+                        <h3 class="text-2xl font-semibold mb-3">Rp 50.000</h3>
+                        <p class="mb-4">Lima Puluh Ribu Rupiah</p>
+                        <button class="w-full bg-white text-blue-600 py-2 rounded-lg font-bold hover:bg-gray-100">Donasi</button>
+                    </div>
+                    <div class="bg-white bg-opacity-20 p-6 rounded-lg backdrop-blur-sm border border-white border-opacity-30 card-hover transform scale-105">
+                        <h3 class="text-2xl font-semibold mb-3">Rp 100.000</h3>
+                        <p class="mb-4">Seratus Ribu Rupiah</p>
+                        <button class="w-full bg-white text-blue-600 py-2 rounded-lg font-bold hover:bg-gray-100">Donasi</button>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm border border-white border-opacity-20 card-hover">
+                        <h3 class="text-2xl font-semibold mb-3">Nominal Lain</h3>
+                        <p class="mb-4">Jumlah bebas</p>
+                        <button class="w-full bg-white text-blue-600 py-2 rounded-lg font-bold hover:bg-gray-100">Donasi</button>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm border border-white border-opacity-20 max-w-2xl mx-auto">
+                    <h3 class="font-bold mb-3">Transfer Bank</h3>
+                    <div class="flex justify-between items-center mb-2 p-3 bg-white bg-opacity-20 rounded-lg">
+                        <span>Bank BCA</span>
+                        <span class="font-mono">123 456 7890</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-2 p-3 bg-white bg-opacity-20 rounded-lg">
+                        <span>Bank Mandiri</span>
+                        <span class="font-mono">987 654 3210</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3 bg-white bg-opacity-20 rounded-lg">
+                        <span>Bank BRI</span>
+                        <span class="font-mono">456 789 0123</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="py-12 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold mb-4">Ikuti Kami di Media Sosial</h2>
+                <p class="max-w-2xl mx-auto">Dapatkan update terbaru tentang kegiatan, informasi, dan kesempatan dari Himami</p>
+            </div>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="bg-white text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-100 transition">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="#" class="bg-white text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-100 transition">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+                <a href="#" class="bg-white text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-100 transition">
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                </a>
+                <a href="#" class="bg-white text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-100 transition">
+                    <i class="fab fa-youtube text-2xl"></i>
+                </a>
+                <a href="#" class="bg-white text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-100 transition">
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">HIMAMI</h3>
+                    <p>Himpunan Mahasiswa Manajemen Informatika, Politeknik Praktisi Bandung.</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-white">Beranda</a></li>
+                        <li><a href="#about" class="hover:text-white">Tentang Himami</a></li>
+                        <li><a href="#Vision Mission" class="hover:text-white">Visi Misi</a></li>
+                        <li><a href="#program" class="hover:text-white">Program/Kegiatan</a></li>
+                        <li><a href="#gallery" class="hover:text-white">Galeri</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Kontak</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>Jl. Ir.H.Djuanda No.294 Dago, Bandung, Jawa Barat, Indonesia</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>+62 852 6126 6099</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@himami</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Newsletter</h3>
+                    <p>Dapatkan informasi terbaru langsung ke email Anda.</p>
+                    <div class="mt-4 flex">
+                        <input type="email" placeholder="Alamat email" class="px-4 py-2 rounded-l-lg w-full focus:outline-none text-gray-900">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p>&copy; Himpunan Mahasiswa Manajemen Informatika. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuButton').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+
+        // Volunteer form submission
+        document.getElementById('volunteerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pendaftaran Anda berhasil dikirim. Kami akan menghubungi Anda segera.');
+            this.reset();
+        });
+
+        // Calendar tooltips
+        const daysWithEvents = document.querySelectorAll('.day:hover');
+        daysWithEvents.forEach(day => {
+            const tooltip = day.querySelector('div');
+            if (tooltip) {
+                day.addEventListener('mouseenter', () => {
+                    tooltip.classList.remove('hidden');
+                });
+                day.addEventListener('mouseleave', () => {
+                    tooltip.classList.add('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
